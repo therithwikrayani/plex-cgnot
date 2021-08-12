@@ -46,7 +46,7 @@ A Python script to access Plex behind CGNAT using an ngrok tunnel
 - Plex should work now outside your network. If you go to Plex settings and then network, turn on advanced settings, you should see a URL in `Custom server access URLs`. 
 - If you play from outside your network, you can get original quality, and it shows up as a local connection in Plex Dashboard.
 
-## Troubleshooting
+# Troubleshooting
 - Make sure Plex Media Server is open before running the script.
 - You can only run one ngrok tunnel at a time with a free account, but there are no bandwidth caps.
 - For any other help, do raise an issue in this repository.
