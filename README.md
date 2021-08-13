@@ -1,5 +1,10 @@
 # Plex-CGNot
-A Python script to access Plex behind CGNAT using an ngrok tunnel. Installation described for Windows, but should work for other operating systems similarly.
+A Python script to access Plex behind CGNAT using an ngrok tunnel.
+<br>
+You can use Plex behind CGNAT using an ngrok tunnel regularly, but you'll have to change Plex configuration every time you reboot and open a new tunnel.
+Given that on a free ngrok plan, you don't get to choose the ngrok IP you're given, I opted to write a simple script to open a tunnel and set the tunnel IP in Plex.
+<br>
+Installation is described for Windows, but should work for other operating systems similarly.
 
 # Installation
 
