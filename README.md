@@ -19,7 +19,7 @@ Installation is described for Windows, but should work for other operating syste
 - Download ngrok for Windows.
 - Unzip and run ngrok.exe.
 - Connect your ngrok account as described in the ngrok dashboard. (Enter `ngrok authtoken XYZ` into the cmd window, replace `XYZ` with your actual authtoken). Close the window.
-- Open the ngrok config file (`C:\Users\<Your Username>\.ngrok2\ngrok.yml`) with notepad and add in the region in a new line as "region: us" or equivalent as per these codes:
+- Open the ngrok config file (`C:\Users\<Your Username>\.ngrok2\ngrok.yml`) with notepad and add in the region in a new line as `region: us` or equivalent as per these codes:
 	- `us`: United States (Default)
 	- `eu`: Europe
 	- `ap`: Asia Pacific
