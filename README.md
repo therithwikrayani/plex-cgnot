@@ -1,4 +1,4 @@
-# Plex-CGNOT
+# plex-cgnot
 A Python script to access Plex behind CGNAT using an ngrok tunnel.
 <br>
 You can use Plex behind CGNAT using an ngrok tunnel regularly, but you'll have to change Plex configuration every time you reboot and open a new tunnel.
