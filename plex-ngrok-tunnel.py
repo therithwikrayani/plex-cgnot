@@ -1,26 +1,23 @@
 import time
-import socket
 from pyngrok import ngrok
-import plexapi
 from plexapi.server import PlexServer
 
-# Open ngrok tunnel
-tunnel = ngrok.connect(32400, "tcp")
-url = tunnel.public_url[6:].split(":")[0]
-ip = socket.gethostbyname(url)
-port = tunnel.public_url[6:].split(":")[1]
-full_ip = "https://" + ip + ":" + port
+TOKEN = '<your-token-here>' # Make sure token is in quotes
+PUBLIC_PORT = 32400 # 32400 is the default port for Plex, do not change unless you know what you're doing.
 
-print('ngrok tunnel opened')
+while True:        
+    # Open ngrok tunnel
+    tunnel = ngrok.connect(PUBLIC_PORT, "tcp")
+    print('ngrok tunnel opened')
 
-# Set Plex Custom URL
-baseurl = 'http://localhost:32400'
-token = '<your-token-here>'
-plex = PlexServer(baseurl, token)
-plex.settings.get('customConnections').set(full_ip)
-plex.settings.save()
+    # Set Plex Custom URL
+    baseurl = 'http://localhost:' + str(PUBLIC_PORT)
+    plex = PlexServer(baseurl, TOKEN)
+    plex.settings.get('customConnections').set(tunnel.public_url)
+    plex.settings.save()
+    print('Plex custom URL set')
 
-print('Plex custom URL set')
+    time.sleep(4 * 3600) # Keep tunnel online, restart tunnel every 4 hours
 
-while True:
-    time.sleep(3600)
+    print('ngrok tunnel restarting')
+    ngrok.disconnect(tunnel.public_url)
