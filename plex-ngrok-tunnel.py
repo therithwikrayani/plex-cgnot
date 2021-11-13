@@ -1,4 +1,5 @@
 import time
+import socket
 from pyngrok import ngrok
 from plexapi.server import PlexServer
 
@@ -7,8 +8,11 @@ PUBLIC_PORT = 32400 # 32400 is the default port for Plex, do not change unless y
 
 while True:
     # Open ngrok tunnel
-    tunnel = ngrok.connect(PUBLIC_PORT, "tcp")
-    public_url = "https" + tunnel.public_url[3:]
+    tunnel = ngrok.connect(PUBLIC_PORT, "tcp")              # tunnel = tcp://abc:xyz
+    url = tunnel.public_url[6:].split(":")[0]               # url = abc
+    ip = socket.gethostbyname(url)                          # ip = gethostbyname(abc) = 123
+    port = tunnel.public_url[6:].split(":")[1]              # port = xyz
+    public_url = "https://" + ip + ":" + port               # public_url = https://123:xyz
     print('ngrok tunnel opened')
 
     # Set Plex Custom URL
