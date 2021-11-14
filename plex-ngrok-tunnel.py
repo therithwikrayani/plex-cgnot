@@ -22,7 +22,7 @@ while True:
     plex.settings.save()
     print('Plex custom URL set')
 
-    time.sleep(4 * 3600) # Keep tunnel online, restart tunnel every 4 hours
+    time.sleep(12 * 3600) # Keep tunnel online, restart tunnel every 12 hours
 
     print('ngrok tunnel restarting')
     ngrok.disconnect(public_url)
