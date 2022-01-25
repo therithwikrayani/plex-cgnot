@@ -46,7 +46,7 @@ Installation is described for Windows, but should work for other operating syste
 - Click on `View XML` — a new tab should open up.
 - Go to the very end of the URL. You should see a 20 character string after `X-Plex-Token=`. Copy this string.
 - Download `plex-ngrok-tunnel.py` from this GitHub repository. Right click and Edit with IDLE (or another editor if you're familiar).
-- Go to line 18 and replace `<your-token-here>` with the copied string. (Make sure its in quotes). Save and Close.
+- Go to line 6 and replace `<your-token-here>` with the copied string. (Make sure its in quotes). Save and Close.
 - Now, run `plex-ngrok-tunnel.py`. As long as you keep this window open, you will have a way to Plex Media Server through a CGNAT thanks to an ngrok tunnel. I recommend leaving it open in another desktop.
 - Plex should work now outside your network. If you go to Plex settings and then network, turn on advanced settings, you should see a URL in `Custom server access URLs`. 
 - If you play from outside your network, you can get original quality, and it shows up as a local connection in Plex Dashboard.
