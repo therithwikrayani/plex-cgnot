@@ -53,5 +53,6 @@ Installation is described for Windows, but should work for other operating syste
 
 # Troubleshooting
 - Make sure Plex Media Server is open before running the script.
+- Make sure Remote Access is turned off, leaving it on may prevent Plex from making secure connections.
 - You can only run one ngrok tunnel at a time with a free account, but there are no bandwidth caps.
 - For any other help, do raise an issue in this repository.
