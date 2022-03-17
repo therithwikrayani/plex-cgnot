@@ -1347,10 +1347,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-xo-typescript@^0.44.0:
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-xo-typescript/-/eslint-config-xo-typescript-0.44.0.tgz#972285f401ea6b26c5802e177431de8b15851b0f"
-  integrity sha512-/mRj2KHHwnl3ZyM8vn68NSfRoEunkSYagWERGmNnU5UOLo4AY9jjBNZW+/sDOaPYuc5xzYmLxYspDCVCXKLGNQ==
+eslint-config-xo-typescript@^0.45.2:
+  version "0.45.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-xo-typescript/-/eslint-config-xo-typescript-0.45.2.tgz#55ed26be3b7c8142e4b0c4ee534e6f318337feb5"
+  integrity sha512-IThUCLrCA8L9dUgXfxoRAFSGEDtvkEBOhIb4vglEzxau99U4PmVLHJ5zjVv8XlxiSVvHbyyJhAQwRcdsLNnwQw==
   dependencies:
     typescript ">=4.3"
 
