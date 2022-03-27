@@ -5,41 +5,33 @@ RUN apt-get update && \
     apt-get install -y ffmpeg && \
     rm -rf /var/lib/apt/lists/*
 
+# Install dependencies
+FROM base AS dependencies
+
 WORKDIR /usr/app
 
 COPY package.json .
 COPY yarn.lock .
 
-# Install prod dependencies
 RUN yarn install --prod
 
-# Dependencies
-FROM base AS dependencies
+# Only keep what's necessary to run
+FROM base AS runner
 
-# Install dev dependencies
-RUN yarn install
+WORKDIR /usr/app
 
-# Build app
-FROM dependencies AS builder
+COPY --from=dependencies /usr/app/node_modules node_modules
 
 COPY . .
 
 RUN yarn prisma generate
 
-# Only copy essentials
-FROM base AS prod
-
-COPY --from=builder /usr/app/src src
-COPY --from=builder /usr/app/schema.prisma .
-COPY --from=builder /usr/app/migrations migrations
-
-RUN yarn prisma generate
-
 ARG COMMIT_HASH=unknown
+ARG BUILD_DATE=unknown
 
 ENV DATA_DIR /data
 ENV NODE_ENV production
-ENV BUILD_DATE $(date)
 ENV COMMIT_HASH $COMMIT_HASH
+ENV BUILD_DATE $BUILD_DATE
 
 CMD ["yarn", "start"]

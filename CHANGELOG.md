@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Error messages consistently show as `🚫 ope: error`
 
+## [1.8.2] - 2022-03-27
+### Fixed
+- `/fseek` now works again
+
+## [1.8.1] - 2022-03-26
+### Changed
+- Reduced image size
+
+## [1.8.0] - 2022-03-24
+### Added
+- Added a configurable bot status with user defined activities
+### Fixed
+- Error messages consistently show as `🚫 ope: error`
+
+## [1.7.0] - 2022-03-19
+### Added
+- Added a `/move` command to change position of tracks
+- Added a `/now-playing` command to show the current track without the full queue embed
+
 ## [1.6.2] - 2022-03-17
 ### Fixed
 - There are no longer FFMPEG orphan processes after listening to a livestream
@@ -123,7 +142,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/codetheweb/muse/compare/v1.6.2...HEAD
+[Unreleased]: https://github.com/codetheweb/muse/compare/v1.8.2...HEAD
+[1.8.2]: https://github.com/codetheweb/muse/compare/v1.8.1...v1.8.2
+[1.8.1]: https://github.com/codetheweb/muse/compare/v1.8.0...v1.8.1
+[1.8.0]: https://github.com/codetheweb/muse/compare/v1.7.0...v1.8.0
+[1.7.0]: https://github.com/codetheweb/muse/compare/v1.6.2...v1.7.0
 [1.6.2]: https://github.com/codetheweb/muse/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/codetheweb/muse/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/codetheweb/muse/compare/v1.5.0...v1.6.0
